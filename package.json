@@ -1,0 +1,15 @@
+{
+  "name": "alpha_notation_blog",
+  "version": "1.0.0",
+  "description": "Alpha notation blog ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Blog",
+    "SEOBLOG"
+  ],
+  "author": "ALPHA_NOTATION",
+  "license": "ISC"
+}
