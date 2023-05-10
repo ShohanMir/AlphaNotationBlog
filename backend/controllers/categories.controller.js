@@ -4,15 +4,15 @@ const slugify = require("slugify");
 
 const { errorHandler } = require("../helpers/dbErrorHandler.js");
 exports.createCategory = (req, res) => {
-  const { categoryName } = req.body;
-  const slug = slugify(categoryName).toLowerCase();
+  const { name } = req.body;
+  let slug = slugify(name).toLowerCase();
 
-  let category = new Category({ categoryName, slug });
+  let category = new Category({ name, slug });
 
   category.save((err, data) => {
     if (err) {
       return res.status(400).json({
-        error: dbErrorHandler(err),
+        error: errorHandler(err),
       });
     }
     res.json(data);
