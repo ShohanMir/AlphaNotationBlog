@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   MDBNavbar,
   MDBContainer,
@@ -10,9 +10,9 @@ import {
   MDBNavbarToggler,
   MDBNavbarBrand,
   MDBCollapse,
-} from "mdb-react-ui-kit";
+} from 'mdb-react-ui-kit';
 
-import { APP_NAME } from "../config";
+import { APP_NAME } from '../config';
 
 function Header(props) {
   const [showNavColor, setShowNavColor] = useState(false);
@@ -23,9 +23,8 @@ function Header(props) {
     <>
       <MDBNavbar expand="lg" dark bgColor="dark">
         <MDBContainer fluid>
-          <Link href="/">
-            <MDBNavbarBrand>Alpha Notation Blog</MDBNavbarBrand>
-          </Link>
+          <MDBNavbarBrand href="/">Alpha Notation Blog</MDBNavbarBrand>
+
           <MDBNavbarToggler
             type="button"
             data-target="#navbarColor02"
@@ -44,14 +43,10 @@ function Header(props) {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <Link href="/signup">
-                  <MDBNavbarLink>Sign Up</MDBNavbarLink>
-                </Link>
+                <MDBNavbarLink href="/signup">Sign Up</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <Link href="/signin">
-                  <MDBNavbarLink href="#">Sign In</MDBNavbarLink>
-                </Link>
+                <MDBNavbarLink href="/signin">Sign In</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href="#">About</MDBNavbarLink>
